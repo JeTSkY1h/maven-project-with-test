@@ -1,7 +1,4 @@
 public class Fakultaet {
-    public static void main(String[] args) {
-        System.out.println(fakulät(3));
-    }
 
     public static int fakulät(int n) {
         int res = 1;
