@@ -49,7 +49,7 @@ class AlarmTest {
     @Test
     void shouldReturn60BecauseAlarmStufeIsGruen(){
         //give
-        String AlarmStufe = "Grün";
+        String AlarmStufe = "grün";
         //when
         var res = Alarm.setAlarmStufe(AlarmStufe);
         //then

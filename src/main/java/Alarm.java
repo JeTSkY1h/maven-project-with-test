@@ -1,11 +1,6 @@
 public class Alarm {
     private static final String WARNING_MESSAGE = "Zu viele Personen";
     private static final String OK_MESSAGE = "Maximale Personenzahl nicht überschritten";
-
-    public static void main(String[] args) {
-
-    }
-
     public static int setAlarmStufe(String alarmString) {
 
         switch (alarmString){
