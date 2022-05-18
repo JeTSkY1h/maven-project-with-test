@@ -3,7 +3,21 @@ public class Alarm {
 
     }
 
-    public static String moreThen30(int n) {
-        return n > 30 ? "Zu viele Personen" : "Maximale Personenzahl nicht überschritten";
+    public static int setAlarmStufe(String alarmString) {
+
+        switch (alarmString){
+            case "rot":
+                return 0;
+            case "gelb":
+                return 30;
+            case "grün":
+                return 60;
+            default:
+                return 60;
+        }
+    }
+
+    public static String checkPpl(int n, String alarmStufe) {
+        return n > setAlarmStufe(alarmStufe) ? "Zu viele Personen" : "Maximale Personenzahl nicht überschritten";
     }
 }
