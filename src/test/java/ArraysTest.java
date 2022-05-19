@@ -26,6 +26,7 @@ public class ArraysTest {
         
     }
 
+
     @Test
     void shouldReturnArrayWith1Students() {
         //given
