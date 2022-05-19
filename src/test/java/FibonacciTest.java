@@ -9,16 +9,18 @@ public class FibonacciTest {
         //when
         var res = Fibonacci.getFibonacci(n);
         //then
-        assertEquals(8, res);
+        long exp = 8;
+        assertEquals(exp, res);
     }
     @Test 
     void Fibonacci0() {
         //given
-        int n = 0 ;
+        int n = 0;
         //when
         var res = Fibonacci.getFibonacci(n);
         //then
-        assertEquals(0, res);
+        long exp = 0;
+        assertEquals(exp, res);
     }
     @Test 
     void Fibonacci1() {
@@ -27,7 +29,8 @@ public class FibonacciTest {
         //when
         var res = Fibonacci.getFibonacci(n);
         //then
-        assertEquals(1, res);
+        long exp = 1;
+        assertEquals(exp, res);
     }
 
     @Test 
@@ -37,6 +40,7 @@ public class FibonacciTest {
         //when
         var res = Fibonacci.getFibonacci(n);
         //then
-        assertEquals(102334155 , res);
+        long exp = 102334155;
+        assertEquals(exp, res);
     }
 }
