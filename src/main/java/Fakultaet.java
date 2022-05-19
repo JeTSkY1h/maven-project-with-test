@@ -1,7 +1,7 @@
 public class Fakultaet {
 
     public static void main(String[] args) {
-        System.out.println(fakultätRekursiv(6));
+        System.out.println(fakultätRekursiv(12));
     }
 
     public static int fakultätFor(int n) {
