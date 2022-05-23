@@ -8,7 +8,7 @@ public class FibonacciTest {
         //given
         int n = 6;
         //when
-        var res = Fibonacci.getFibonacci(n);
+        var res = Fibonacci.getFibonacciFor(n);
         //then
         long exp = 8;
         assertEquals(exp, res);
@@ -37,11 +37,11 @@ public class FibonacciTest {
     @Test 
     void Fibonacci49() {
         //given
-        int n = 49;
+        int n = 25;
         //when
         var res = Fibonacci.getFibonacciFor(n);
         //then
-        Long exp = 12586269025L;
+        Long exp = 75025L;
         assertEquals(exp, res);
     }
 }

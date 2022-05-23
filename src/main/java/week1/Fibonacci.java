@@ -7,17 +7,18 @@ public class Fibonacci {
     }
 
     public static long getFibonacciFor(int n) {
-        long last = 0;
-        long next = 1;
+        long last = 0L;
+        long next = 1L;
+        long res = 0;
         if (n < 2) {
             return n;
         }
-        for (long i = 0; i < n; i++) {
-            long old_last = last;
+        for (long i = 1L; i < n; i++) {
+            res = last + next;
             last = next;
-            next = old_last + next;
+            next = res;
         }
-        return next; 
+        return res; 
     }
 
     public static long getFibonacci(int n) {
