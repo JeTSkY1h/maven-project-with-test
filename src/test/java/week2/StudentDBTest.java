@@ -18,8 +18,6 @@ import static org.junit.jupiter.api.Assertions.*;
         assertArrayEquals(studArr, studentDB.list());
         
         assertEquals("Beate die behaarte", res[0].getName());
-
-
      }
 
      @Test
@@ -30,9 +28,12 @@ import static org.junit.jupiter.api.Assertions.*;
             new Student("Frank Castle", 3, "Boston"),
              new Student("Motoko Kusanagi",1,"Niihama-shi")
          };
-         String expected = "Name: Beate die behaaarte\nID: 0\ngrade: 5\nOrt: Dümmlinghause\n\nName: Frank Castle\nID: 1\ngrade: 3\nOrt: Boston\n\nName: Motoko Kusanagi\nID: 2\ngrade: 1\nOrt: Niihama-shi\n\n";
-         //then
          StudentDB res = new StudentDB(studArr);
+         //then
+         String expected = "Name: Beate die behaaarte\nID: " 
+         + res.list()[0].getId() + "\ngrade: 5\nOrt: Dümmlinghause\n\nName: Frank Castle\nID: " 
+         + res.list()[1].getId() +"\ngrade: 3\nOrt: Boston\n\nName: Motoko Kusanagi\nID: "
+         + res.list()[2].getId() +"\ngrade: 1\nOrt: Niihama-shi\n\n";
         //when
         assertEquals(expected, res.toString());
 
