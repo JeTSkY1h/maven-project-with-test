@@ -1,5 +1,7 @@
 package week2;
 
+import java.util.Arrays;
+
 public  class StudentDB {
     private Student[] studArr;
     
@@ -25,5 +27,16 @@ public  class StudentDB {
         int rNum = (int)Math.random()*studArr.length;
         return studArr[rNum];
     }
+
+    public void add(Student newStudent){
+        Student[] newArr = Arrays.copyOf(studArr, studArr.length + 1);
+        newArr[newArr.length-1] = newStudent;
+        this.studArr = newArr;
+    }
+
+    // public void removeByIndex(int index){
+    //     Student[] newArr = Arrays.copyOf(studArr, studArr.length - 1);
+    //     System.arraycopy(studArr, index, newArr, arg3, arg4);
+    // }
 
 }

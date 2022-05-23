@@ -38,4 +38,38 @@ import static org.junit.jupiter.api.Assertions.*;
         assertEquals(expected, res.toString());
 
      }
+
+     @Test
+     void shouldAddNewStudent(){
+        Student s1 = new Student("Beate die behaaarte",5,"Dümmlinghause");
+        Student s2 = new Student("Frank Castle", 3, "Boston");
+        Student s3 = new Student("Motoko Kusanagi",1,"Niihama-shi");
+        Student[] students = {s1,s2,s3};
+        StudentDB res = new StudentDB(students);
+        Student newS = new Student("Asterix",1 , "Gallien");
+        
+        Student[] expected = {s1,s2,s3,newS};
+        res.add(newS);
+
+        Student[] actual = res.list();
+        
+        assertArrayEquals(expected, actual);
+    }
+
+    //  @Test
+    //  void shouldRemoveStudent(){
+    //      Student s1 = new Student("Beate die behaaarte",5,"Dümmlinghause");
+    //      Student s2 = new Student("Frank Castle", 3, "Boston");
+    //      Student s3 = new Student("Motoko Kusanagi",1,"Niihama-shi");
+    //      Student[] students = {s1,s2,s3};
+    //      StudentDB res = new StudentDB(students);
+    //      Student newS = new Student("Asterix",1 , "Gallien");
+
+    //      Student[] expected = {s1,s2,s3,newS};
+    //      res.add(newS);
+
+    //      Student[] actual = res.list();
+
+    //      assertArrayEquals(expected, actual);
+    //  }
  }
