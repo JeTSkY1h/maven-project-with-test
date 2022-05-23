@@ -3,10 +3,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class StudentTest {
-    Student student = new Student();
     
     @Test
     void shouldCreateClassStudentWithName(){
+        Student student = new Student();
         //given
         String name = "Günter";
         //when
@@ -17,6 +17,7 @@ public class StudentTest {
 
     @Test 
     void shouldCreateClassStudentWithGrade(){
+        Student student = new Student();
         //given
         int grade = 1;
         //when
@@ -27,6 +28,7 @@ public class StudentTest {
 
     @Test 
     void shouldCreateClassStudentWithLocation(){
+        Student student = new Student();
         //given
         String location = "Cologne";
         //when
