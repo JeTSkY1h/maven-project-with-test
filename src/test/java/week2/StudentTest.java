@@ -33,7 +33,7 @@ public class StudentTest {
         //when
         String res = student.toString();
         //then
-        assertEquals("Name: Motoko Kusanagi\nNote: 1\nOrt: Niihama-shi", res);
+        assertEquals("Name: Motoko Kusanagi\nID: " + student.getId() + "\ngrade: 1\nOrt: Niihama-shi\n", res);
     }
 
 }
