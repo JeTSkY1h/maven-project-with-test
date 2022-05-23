@@ -7,8 +7,8 @@ public class StudentTest {
     
     @Test
     void shouldCreateClassStudentWithName(){
-        Student student = new Student("Beate die behaaarte",5,"Dümmlinghause");
         //given
+        Student student = new Student("Beate die behaaarte",5,"Dümmlinghause");
         String name = "Günter";
         //when
         student.setName(name);
@@ -18,8 +18,8 @@ public class StudentTest {
 
     @Test 
     void shouldCreateClassStudentWithGrade(){
-        Student student = new Student("Frank Castle", 3, "Boston");
         //given
+        Student student = new Student("Frank Castle", 3, "Boston");
         int grade = 1;
         //when
         student.setGrade(grade);
@@ -29,13 +29,23 @@ public class StudentTest {
 
     @Test 
     void shouldCreateClassStudentWithLocation(){
-        Student student = new Student("Motoko Kusanagi",1,"Niihama-shi");
         //given
+        Student student = new Student("Motoko Kusanagi",1,"Niihama-shi");
         String location = "Cologne";
         //when
         student.setLocation(location);
         //then
         assertEquals(location, student.getLocation());
+    }
+
+    @Test
+    void shouldReturnStringWithStudentInfo(){
+        //given
+        Student student = new Student("Motoko Kusanagi",1,"Niihama-shi");
+        //when
+        String res = student.toString();
+        //then
+        assertEquals("Name: Motoko Kusanagi\nNote: 1\nOrt: Niihama-shi", res);
     }
 
     

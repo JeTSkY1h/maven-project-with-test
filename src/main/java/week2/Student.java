@@ -8,18 +8,25 @@ public class Student {
     private int grade;
     private String location;
 
-    public Student(String name, int grade, String location){
+    Student(String name, int grade, String location){
         this.name = name; 
         this.grade = grade; 
         this.location = location; 
     }
 
-    void setGrade(int grade) {
-        this.grade = grade;
+    public String getName(){
+        return this.name;
+    }    
+    public String getLocation(){
+        return this.location;
     }
 
-    int getGrade() {
+    public int getGrade() {
         return this.grade;
+    }
+
+    void setGrade(int grade) {
+        this.grade = grade;
     }
 
     void setName(String name){
@@ -30,12 +37,10 @@ public class Student {
         this.location = location;
     }
 
-    String getName(){
-        return this.name;
-    }    
-    String getLocation(){
-        return this.location;
+    public String toString(){
+        return "Name: " + this.name + "\n"
+        + "Note: " + this.grade + "\n" 
+        + "Ort: " + this.location;
     }
-
 
 }
