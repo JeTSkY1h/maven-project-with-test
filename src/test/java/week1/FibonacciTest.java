@@ -35,13 +35,13 @@ public class FibonacciTest {
     }
 
     @Test 
-    void Fibonacci40() {
+    void Fibonacci49() {
         //given
-        int n = 40;
+        int n = 49;
         //when
-        var res = Fibonacci.getFibonacci(n);
+        var res = Fibonacci.getFibonacciFor(n);
         //then
-        long exp = 102334155;
+        Long exp = 12586269025L;
         assertEquals(exp, res);
     }
 }

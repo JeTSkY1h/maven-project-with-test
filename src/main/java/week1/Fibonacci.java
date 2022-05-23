@@ -3,21 +3,21 @@ package week1;
 public class Fibonacci {
 
     public static void main(String[] args) {
-        System.out.println(getFibonacci(47));
+        System.out.println(getFibonacciFor(47));
     }
 
-    public static int getFibonacciFor(int n) {
-        int last = 0;
-        int next = 0;
+    public static long getFibonacciFor(int n) {
+        long last = 0;
+        long next = 1;
         if (n < 2) {
             return n;
         }
-        for (int i = 0; i < n; i++) {
-            int old_last = last;
+        for (long i = 0; i < n; i++) {
+            long old_last = last;
             last = next;
             next = old_last + next;
         }
-        return next;
+        return next; 
     }
 
     public static long getFibonacci(int n) {

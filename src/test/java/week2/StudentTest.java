@@ -2,7 +2,6 @@ package week2;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
 public class StudentTest {
     
     @Test
@@ -47,10 +46,6 @@ public class StudentTest {
         //then
         assertEquals("Name: Motoko Kusanagi\nNote: 1\nOrt: Niihama-shi", res);
     }
-
-    
-
-
 
 }
 
