@@ -34,4 +34,8 @@ public  class StudentDB {
         this.studArr = newArr;
     }
 
+    public void remove(String studentName) {
+        Student[] res = Arrays.copyOf(studArr,studArr.length-1);
+
+    }
 }
