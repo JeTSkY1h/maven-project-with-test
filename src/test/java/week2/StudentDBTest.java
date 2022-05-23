@@ -45,13 +45,13 @@ import static org.junit.jupiter.api.Assertions.*;
         Student s2 = new Student("Frank Castle", 3, "Boston");
         Student s3 = new Student("Motoko Kusanagi",1,"Niihama-shi");
         Student[] students = {s1,s2,s3};
-        StudentDB res = new StudentDB(students);
+        StudentDB studentDB = new StudentDB(students);
         Student newS = new Student("Asterix",1 , "Gallien");
         
         Student[] expected = {s1,s2,s3,newS};
-        res.add(newS);
+        studentDB.add(newS);
 
-        Student[] actual = res.list();
+        Student[] actual = studentDB.list();
         
         assertArrayEquals(expected, actual);
     }
