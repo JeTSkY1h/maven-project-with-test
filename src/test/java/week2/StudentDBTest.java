@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
          //given
          Student[] studArr = new Student[] {
              new Student("Beate die behaaarte",5,"Dümmlinghause"),
-            new Student("Frank Castle", 3, "Boston"),
+             new Student("Frank Castle", 3, "Boston"),
              new Student("Motoko Kusanagi",1,"Niihama-shi")
          };
          StudentDB res = new StudentDB(studArr);
