@@ -1,3 +1,4 @@
+package week2;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,7 +7,7 @@ public class StudentTest {
     
     @Test
     void shouldCreateClassStudentWithName(){
-        Student student = new Student();
+        Student student = new Student("Beate die behaaarte",5,"Dümmlinghause");
         //given
         String name = "Günter";
         //when
@@ -17,7 +18,7 @@ public class StudentTest {
 
     @Test 
     void shouldCreateClassStudentWithGrade(){
-        Student student = new Student();
+        Student student = new Student("Frank Castle", 3, "Boston");
         //given
         int grade = 1;
         //when
@@ -28,7 +29,7 @@ public class StudentTest {
 
     @Test 
     void shouldCreateClassStudentWithLocation(){
-        Student student = new Student();
+        Student student = new Student("Motoko Kusanagi",1,"Niihama-shi");
         //given
         String location = "Cologne";
         //when
@@ -36,6 +37,9 @@ public class StudentTest {
         //then
         assertEquals(location, student.getLocation());
     }
+
+    
+
 
 
 }

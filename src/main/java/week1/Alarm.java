@@ -1,3 +1,4 @@
+package week1;
 public class Alarm {
     
     private static final String WARNING_MESSAGE = "Zu viele Personen";

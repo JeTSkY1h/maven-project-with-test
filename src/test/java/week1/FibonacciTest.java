@@ -1,4 +1,7 @@
 import org.junit.jupiter.api.Test;
+
+import week1.Fibonacci;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FibonacciTest {

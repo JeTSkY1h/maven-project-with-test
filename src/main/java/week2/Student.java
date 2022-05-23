@@ -1,11 +1,18 @@
+package week2;
 /**
  * Student
  */
 
-class Student {
+public class Student {
     private String name;
     private int grade;
     private String location;
+
+    public Student(String name, int grade, String location){
+        this.name = name; 
+        this.grade = grade; 
+        this.location = location; 
+    }
 
     void setGrade(int grade) {
         this.grade = grade;
@@ -29,5 +36,6 @@ class Student {
     String getLocation(){
         return this.location;
     }
+
 
 }

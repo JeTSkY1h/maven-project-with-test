@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import week1.Adder;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AdderTest {

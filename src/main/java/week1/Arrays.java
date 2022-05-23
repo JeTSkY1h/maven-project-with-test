@@ -1,3 +1,4 @@
+package week1;
 public class Arrays {
     public static void main(String[] args) {
         int[] nArr = {1,2,3,4};

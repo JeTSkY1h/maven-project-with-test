@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import week1.NumberChecker;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class NumberCheckerTest {
