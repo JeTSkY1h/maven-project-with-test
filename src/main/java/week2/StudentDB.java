@@ -34,9 +34,4 @@ public  class StudentDB {
         this.studArr = newArr;
     }
 
-    // public void removeByIndex(int index){
-    //     Student[] newArr = Arrays.copyOf(studArr, studArr.length - 1);
-    //     System.arraycopy(studArr, index, newArr, arg3, arg4);
-    // }
-
 }
