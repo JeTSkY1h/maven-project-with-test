@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
        new Student("Frank Castle", 3, "Boston"),
         new Student("Motoko Kusanagi",1,"Niihama-shi")
        };
+    private Student Asterix = new Student("Asterix",1 , "Gallien");
     
     @Test
      void ShouldListStudents(){
@@ -25,30 +26,37 @@ import static org.junit.jupiter.api.Assertions.*;
          //given
          StudentDB StudentDB = new StudentDB(studArr);
          //then
+         String actual = StudentDB.toString();
          String expected = "Name: Beate die behaaarte\nID: " 
          + StudentDB.list()[0].getId() + "\ngrade: 5\nOrt: Dümmlinghause\n\nName: Frank Castle\nID: " 
          + StudentDB.list()[1].getId() +"\ngrade: 3\nOrt: Boston\n\nName: Motoko Kusanagi\nID: "
          + StudentDB.list()[2].getId() +"\ngrade: 1\nOrt: Niihama-shi\n\n";
         //when
-        assertEquals(expected, StudentDB.toString());
+        assertEquals(expected, actual);
 
      }
 
      @Test
      void shouldAddNewStudent(){
         StudentDB studentDB = new StudentDB(studArr);
-        Student newS = new Student("Asterix",1 , "Gallien");
         
-        Student[] expected = {studArr[0],studArr[1],studArr[2],newS};
-        studentDB.add(newS);
+        
+        Student[] expected = {studArr[0],studArr[1],studArr[2],Asterix};
+        studentDB.add(Asterix);
         Student[] actual = studentDB.list();
         
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    void shouldRemoveStudent(){
-        
+    void shouldRemoveStudentByName(){
+        //given
+        StudentDB studentDB = new StudentDB(studArr);
+        studentDB.add(Asterix);
+        //When
+        studentDB.remove("Asterix");
+        Student[] actual =  studentDB.list();
+        Student[] expected = studArr;
         
         assertArrayEquals(expected, actual);
         
