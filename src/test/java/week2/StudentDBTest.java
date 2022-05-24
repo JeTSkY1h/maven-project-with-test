@@ -4,11 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
  public class StudentDBTest { 
     private Student[] studArr = new Student[] {
-        new Student("Beate die behaarte",5,"Dümmlinghause"),
-       new Student("Frank Castle", 3, "Boston"),
-        new Student("Motoko Kusanagi",1,"Niihama-shi")
+        new EDVStudent("Beate die behaarte",5,"Dümmlinghause"),
+       new HISStudent("Frank Castle", 3, "Boston"),
+        new EDVStudent("Motoko Kusanagi",1,"Niihama-shi")
        };
-    private Student Asterix = new Student("Asterix",1 , "Gallien");
+    private Student Asterix = new HISStudent("Asterix",1 , "Gallien");
     
     @Test
      void ShouldListStudents(){
@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.*;
          StudentDB StudentDB = new StudentDB(studArr);
          //then
          String actual = StudentDB.toString();
-         String expected = "Name: Beate die behaaarte\nID: " 
+         String expected = "Name: Beate die behaarte\nID: " 
          + StudentDB.list()[0].getId() + "\ngrade: 5\nOrt: Dümmlinghause\n\nName: Frank Castle\nID: " 
          + StudentDB.list()[1].getId() +"\ngrade: 3\nOrt: Boston\n\nName: Motoko Kusanagi\nID: "
          + StudentDB.list()[2].getId() +"\ngrade: 1\nOrt: Niihama-shi\n\n";
