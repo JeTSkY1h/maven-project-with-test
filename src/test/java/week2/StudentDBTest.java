@@ -1,7 +1,7 @@
 package week2;
 import org.junit.jupiter.api.Test;
 
-import week2.Interface.*;
+import week2.inheritance.*;
 import static org.junit.jupiter.api.Assertions.*;
 
  public class StudentDBTest { 

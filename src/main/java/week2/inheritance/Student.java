@@ -4,7 +4,7 @@ import java.util.UUID;
  * Student
  */
 
-public class Student {
+public abstract class Student {
 
     private String name;
     private int grade;

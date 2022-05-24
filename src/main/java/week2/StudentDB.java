@@ -2,7 +2,7 @@ package week2;
 
 import java.util.Arrays;
 
-import week2.Interface.Student;
+import week2.inheritance.Student;
 
 public  class StudentDB {
     private Student[] studArr;

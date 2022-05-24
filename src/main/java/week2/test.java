@@ -1,8 +1,7 @@
 package week2;
 
-import week2.Interface.EDVStudent;
-import week2.Interface.HISStudent;
-import week2.Interface.Student;
+import week2.inheritance.*;
+
 
 public class test {
     public static void main(String[] args) {
