@@ -37,9 +37,7 @@ public  class StudentDB {
     public void removeByIndex(int index){
         Student[] res = Arrays.copyOf(studArr,studArr.length-1);
         System.arraycopy(studArr, 0, res, 0, index);
-        System.out.println(Arrays.toString(res));
         System.arraycopy(studArr, index + 1, res, index, studArr.length - (index +1) );
-        System.out.println(Arrays.toString(res));
         this.studArr = res;
         }
 

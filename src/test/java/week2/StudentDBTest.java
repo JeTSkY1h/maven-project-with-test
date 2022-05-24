@@ -39,12 +39,9 @@ import static org.junit.jupiter.api.Assertions.*;
      @Test
      void shouldAddNewStudent(){
         StudentDB studentDB = new StudentDB(studArr);
-        
-        
         Student[] expected = {studArr[0],studArr[1],studArr[2],Asterix};
         studentDB.add(Asterix);
         Student[] actual = studentDB.list();
-        
         assertArrayEquals(expected, actual);
     }
 
