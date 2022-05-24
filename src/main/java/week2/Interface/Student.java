@@ -1,11 +1,8 @@
-package week2;
-
-
+package week2.Interface;
 
 /**
  * Student
  */
-
 
 public interface Student {
     String getName();

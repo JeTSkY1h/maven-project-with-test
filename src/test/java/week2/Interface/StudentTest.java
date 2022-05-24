@@ -1,5 +1,7 @@
-package week2;
+package week2.Interface;
 import org.junit.jupiter.api.Test;
+
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StudentTest {

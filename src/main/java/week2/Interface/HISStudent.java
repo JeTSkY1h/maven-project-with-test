@@ -1,8 +1,7 @@
-package week2;
-
+package week2.Interface;
 import java.util.UUID;
 
-class HISStudent implements Student {
+public class HISStudent implements Student {
 
     private String name;
     private int grade;

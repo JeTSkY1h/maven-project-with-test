@@ -2,13 +2,14 @@ package week2;
 
 import java.util.Arrays;
 
+import week2.Interface.Student;
+
 public  class StudentDB {
     private Student[] studArr;
     
     
     StudentDB(Student[] studArr){
         this.studArr = studArr;
-        
     }
 
     Student[] list(){

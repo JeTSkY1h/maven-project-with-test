@@ -1,16 +1,17 @@
-package week2;
-
+package week2.inheritance;
 import java.util.UUID;
+/**
+ * Student
+ */
 
-class EDVStudent implements Student {
+public class Student {
 
     private String name;
     private int grade;
     private String location;
     private final String id = UUID.randomUUID().toString();
-    private String subject;
 
-    public EDVStudent(String name,int grade, String location){
+    public Student(String name,int grade, String location){
         this.name = name; 
         this.grade = grade; 
         this.location = location; 
@@ -39,10 +40,6 @@ class EDVStudent implements Student {
         this.location = location;
     }
 
-    public String getSubject() {
-        return this.subject;
-    }
-
     @Override
     public String toString(){
         return "Name: " + this.name + "\n"
@@ -50,5 +47,4 @@ class EDVStudent implements Student {
         + "grade: " + this.grade + "\n" 
         + "Ort: " + this.location + "\n";
     }
-
 }
