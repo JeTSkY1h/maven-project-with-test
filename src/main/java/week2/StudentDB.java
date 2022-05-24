@@ -34,8 +34,26 @@ public  class StudentDB {
         this.studArr = newArr;
     }
 
-    public void remove(String studentName) {
+    public void removeByIndex(int index){
         Student[] res = Arrays.copyOf(studArr,studArr.length-1);
+        System.arraycopy(studArr, 0, res, 0, index);
+        System.out.println(Arrays.toString(res));
+        System.arraycopy(studArr, index + 1, res, index, studArr.length - (index +1) );
+        System.out.println(Arrays.toString(res));
+        this.studArr = res;
+        }
 
+    private int getIndexByName(String name){
+        for (int i = 0; i < studArr.length; i++) {
+            Student student = studArr[i];
+            if(student.getName().equals(name)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void removeByName(String studentName) {
+        removeByIndex(getIndexByName(studentName));
     }
 }

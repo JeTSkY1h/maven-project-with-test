@@ -54,7 +54,7 @@ import static org.junit.jupiter.api.Assertions.*;
         StudentDB studentDB = new StudentDB(studArr);
         studentDB.add(Asterix);
         //When
-        studentDB.remove("Asterix");
+        studentDB.removeByName("Asterix");
         Student[] actual =  studentDB.list();
         Student[] expected = studArr;
         
