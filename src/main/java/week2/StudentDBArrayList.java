@@ -1,58 +1,57 @@
 package week2;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 import week2.inheritance.Student;
 
 public  class StudentDBArrayList {
-    private Student[] studArr;
+    private ArrayList<Student> students;
     
     
-    StudentDBArrayList(Student[] studArr){
-        this.studArr = studArr;
+    StudentDBArrayList( ArrayList<Student> students){
+        this.students = students;
     }
 
-    Student[] list(){
-        return studArr;
+    ArrayList<Student> list(){
+        return students;
     }
 
     public String toString(){
         String res = "";
-        for (int i = 0; i < studArr.length; i++) {
-            res += studArr[i].toString() + "\n";
+        for (Student student : students) {
+            res += student.toString() + "\n";
         }
         return res;
+
     }
 
     public Student randomStudent(){
-        int rNum = (int)Math.random()*studArr.length;
-        return studArr[rNum];
+        int rNum = (int)Math.random()*students.size();
+        return students.get(rNum);
     }
 
-    public void add(Student newStudent){
-        Student[] newArr = Arrays.copyOf(studArr, studArr.length + 1);
-        newArr[newArr.length-1] = newStudent;
-        this.studArr = newArr;
+    public void addToDb(Student newStudent){
+        students.add(newStudent);
     }
 
-    public void removeByIndex(int index){
-        Student[] res = Arrays.copyOf(studArr,studArr.length-1);
-        System.arraycopy(studArr, 0, res, 0, index);
-        System.arraycopy(studArr, index + 1, res, index, studArr.length - (index +1) );
-        this.studArr = res;
-        }
-
-    private int getIndexByName(String name){
-        for (int i = 0; i < studArr.length; i++) {
-            Student student = studArr[i];
-            if(student.getName().equals(name)){
+    public int getIndexByName(String name){
+        for (int i = 0; i < students.size(); i++) {
+            Student student = students.get(i);
+            if (student.getName().equals(name)){
                 return i;
             }
         }
         return -1;
     }
 
+    public void removeByIndex(int index){
+        students.remove(index);
+    }
+
+        
+
+
     public void removeByName(String studentName) {
-        removeByIndex(getIndexByName(studentName));
+        students.remove(getIndexByName(studentName));
     }
 }
