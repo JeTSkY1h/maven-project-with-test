@@ -40,7 +40,7 @@ public class AnimalListTest {
     }
 
     @Test
-    void shouldRemoveMiddleItemToList(){
+    void shouldRemoveMiddleItemFromList(){
         AnimalList animalList = new AnimalList();
         Animal axolotl = new Animal("Axolotl");
         animalList.add(axolotl);
@@ -48,5 +48,16 @@ public class AnimalListTest {
         animalList.add(eichhörnchen);
         animalList.remove(huhn);
         assertEquals("Axolotl -> Eichhörnchen", animalList.toString());
+    }
+
+    @Test
+    void shouldRemoveLastItemFromList(){
+        AnimalList animalList = new AnimalList();
+        Animal axolotl = new Animal("Axolotl");
+        animalList.add(axolotl);
+        animalList.add(huhn);
+        animalList.add(eichhörnchen);
+        animalList.remove(eichhörnchen);
+        assertEquals("Axolotl -> Huhn", animalList.toString());
     }
 }

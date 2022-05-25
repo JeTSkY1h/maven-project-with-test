@@ -1,9 +1,9 @@
 package week2.StudentDB;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import week2.StudentDB.inheritance.*;
+
+
  public class StudentDBTest { 
     private Student[] studArr = new Student[] {
         new EDVStudent("Beate die behaarte",5,"Dümmlinghause"),

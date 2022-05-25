@@ -12,7 +12,7 @@ import week2.StudentDB.inheritance.Student;
 
 
 public class StudentDBArrayListTest {
-    ArrayList<Student> students = new ArrayList<>(); {
+    private ArrayList<Student> students = new ArrayList<>(); {
         students.add(new EDVStudent("Beate die behaarte",5,"Dümmlinghause"));
         students.add(new EDVStudent("Frank Castle", 3, "Boston"));
         students.add(new EDVStudent("Motoko Kusanagi",1,"Niihama-shi"));
