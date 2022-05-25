@@ -1,17 +1,16 @@
-package week2.inheritance;
-import java.util.UUID;
-/**
- * Student
- */
+package week2.StudentDB.Interface;
 
-public abstract class Student {
+import java.util.UUID;
+
+public class EDVStudent implements Student {
 
     private String name;
     private int grade;
     private String location;
     private final String id = UUID.randomUUID().toString();
+    private String subject = "EDV";
 
-    public Student(String name,int grade, String location){
+    public EDVStudent(String name,int grade, String location){
         this.name = name; 
         this.grade = grade; 
         this.location = location; 
@@ -39,6 +38,11 @@ public abstract class Student {
     public void setLocation(String location){
         this.location = location;
     }
+
+    public String getSubject() {
+        return this.subject;
+    }
+
 
     @Override
     public String toString(){

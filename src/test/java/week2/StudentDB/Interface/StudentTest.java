@@ -1,9 +1,6 @@
-package week2.inheritance;
+package week2.StudentDB.Interface;
 import org.junit.jupiter.api.Test;
 
-import week2.Interface.EDVStudent;
-import week2.Interface.HISStudent;
-import week2.Interface.Student;
 
 import static org.junit.jupiter.api.Assertions.*;
 

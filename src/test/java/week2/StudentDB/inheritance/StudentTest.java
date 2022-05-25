@@ -1,4 +1,4 @@
-package week2.Interface;
+package week2.StudentDB.inheritance;
 import org.junit.jupiter.api.Test;
 
 
@@ -41,7 +41,7 @@ public class StudentTest {
     @Test 
     void shouldReturnStringWithSubject(){
         //given
-        Student Asterix = new HISStudent("Asterix",1 , "Gallien");
+        HISStudent Asterix = new HISStudent("Asterix",1 , "Gallien");
         //then
         String res = Asterix.getSubject();
         assertEquals("history", res);

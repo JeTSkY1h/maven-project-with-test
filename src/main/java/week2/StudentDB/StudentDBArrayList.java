@@ -1,8 +1,8 @@
-package week2;
+package week2.StudentDB;
 
 import java.util.ArrayList;
 
-import week2.inheritance.Student;
+import week2.StudentDB.inheritance.Student;
 
 public  class StudentDBArrayList {
     private ArrayList<Student> students;

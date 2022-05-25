@@ -1,4 +1,4 @@
-package week2.Interface;
+package week2.StudentDB.Interface;
 
 /**
  * Student

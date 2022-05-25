@@ -1,9 +1,15 @@
-package week2;
+package week2.StudentDB;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
-import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
-import week2.inheritance.*;
+
+import week2.StudentDB.inheritance.EDVStudent;
+import week2.StudentDB.inheritance.HISStudent;
+import week2.StudentDB.inheritance.Student;
+
 
 public class StudentDBArrayListTest {
     ArrayList<Student> students = new ArrayList<>(); {

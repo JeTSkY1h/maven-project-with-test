@@ -1,6 +1,6 @@
-package week2;
+package week2.StudentDB;
 
-import week2.inheritance.*;
+import week2.StudentDB.inheritance.*;
 
 
 public class test {

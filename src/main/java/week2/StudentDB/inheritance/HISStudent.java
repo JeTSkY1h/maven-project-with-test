@@ -1,4 +1,4 @@
-package week2.inheritance;
+package week2.StudentDB.inheritance;
 
 
 public class HISStudent extends Student {
