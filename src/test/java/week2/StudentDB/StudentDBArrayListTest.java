@@ -1,6 +1,7 @@
 package week2.StudentDB;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 
@@ -12,15 +13,14 @@ import week2.StudentDB.inheritance.Student;
 
 
 public class StudentDBArrayListTest {
-    private ArrayList<Student> students = new ArrayList<>(); {
+    private Student Asterix = new HISStudent("Asterix",1 , "Gallien");
+
+    @Test
+     void ShouldListStudents(){
+        ArrayList<Student> students = new ArrayList<>();
         students.add(new EDVStudent("Beate die behaarte",5,"Dümmlinghause"));
         students.add(new EDVStudent("Frank Castle", 3, "Boston"));
         students.add(new EDVStudent("Motoko Kusanagi",1,"Niihama-shi"));
-       };
-    private Student Asterix = new HISStudent("Asterix",1 , "Gallien");
-   
-    @Test
-     void ShouldListStudents(){
         //given
         StudentDBArrayList StudentDBArrayList = new StudentDBArrayList(students);
         //when 
@@ -33,6 +33,10 @@ public class StudentDBArrayListTest {
      @Test
      void ShouldListStudentsAsString(){
          //given
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new EDVStudent("Beate die behaarte",5,"Dümmlinghause"));
+        students.add(new EDVStudent("Frank Castle", 3, "Boston"));
+        students.add(new EDVStudent("Motoko Kusanagi",1,"Niihama-shi"));
          StudentDBArrayList StudentDBArrayList = new StudentDBArrayList(students);
          //then
          String actual = StudentDBArrayList.toString();
@@ -44,29 +48,56 @@ public class StudentDBArrayListTest {
         assertEquals(expected, actual);
 
      }
-   
-
+     
      @Test
-     void shouldAddNewStudent(){
-      StudentDBArrayList StudentDBArrayList = new StudentDBArrayList(students);
-      ArrayList<Student> expected = new ArrayList<>();
-      expected.add(students.get(0));
-      expected.add(students.get(1));
-      expected.add(students.get(2));
-      expected.add(Asterix);
+    void shouldThrowExpectionBecauseStudentIsAllreadyInDB(){
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new EDVStudent("Beate die behaarte",5,"Dümmlinghause"));
+        students.add(new EDVStudent("Frank Castle", 3, "Boston"));
+        students.add(new EDVStudent("Motoko Kusanagi",1,"Niihama-shi"));
+        students.add(Asterix);
+        StudentDBArrayList StudentDBArrayList = new StudentDBArrayList(students);
+        boolean thrown = false;
+        try {
+            StudentDBArrayList.addToDb(Asterix);
+        } catch (RuntimeException e) {
+            thrown = true;
+        }
+        assertTrue(thrown);
+        }
+
+    @Test
+    void shouldAddNewStudent(){
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new EDVStudent("Beate die behaarte",5,"Dümmlinghause"));
+        students.add(new EDVStudent("Frank Castle", 3, "Boston"));
+        students.add(new EDVStudent("Motoko Kusanagi",1,"Niihama-shi"));
+        StudentDBArrayList StudentDBArrayList = new StudentDBArrayList(students);
+        ArrayList<Student> expected = new ArrayList<>();
+        expected.add(students.get(0));
+        expected.add(students.get(1));
+        expected.add(students.get(2));
+        expected.add(Asterix);
+
       StudentDBArrayList.addToDb(Asterix);
       ArrayList<Student> actual = StudentDBArrayList.list();
         assertEquals(expected, actual);
-      }
+    }
 
      @Test
      void shouldRemoveStudentByName(){
-         //given
-         StudentDBArrayList StudentDBArrayList = new StudentDBArrayList(students);
-         StudentDBArrayList.addToDb(Asterix);
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new EDVStudent("Beate die behaarte",5,"Dümmlinghause"));
+        students.add(new EDVStudent("Frank Castle", 3, "Boston"));
+        students.add(new EDVStudent("Motoko Kusanagi",1,"Niihama-shi"));
+        //given
+        StudentDBArrayList StudentDBArrayList2 = new StudentDBArrayList(students);
+        StudentDBArrayList2.addToDb(Asterix);
+       
+        StudentDBArrayList2.removeByName("Asterix");
+        
          //When
-         StudentDBArrayList.removeByName("Asterix");
-         ArrayList<Student> actual =  StudentDBArrayList.list();
+         ArrayList<Student> actual =  StudentDBArrayList2.list();
          ArrayList<Student> expected = students;      
          assertEquals(expected, actual);      
      }

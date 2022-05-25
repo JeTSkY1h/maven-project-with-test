@@ -68,6 +68,31 @@ public class StudentDBHashMapTest {
     }
 
     @Test
+    void shouldthrowException(){
+        students.put(student0.getId(),student0);
+        students.put(student1.getId(),student1);
+        students.put(student2.getId(),student2);
+        StudentDBHashMap studentDBHashMap = new StudentDBHashMap(students);
+        boolean thrown = false;
+        Map<String, Student> expected = new HashMap<String, Student>();
+        expected.put(student0.getId(),student0);
+        expected.put(student1.getId(),student1);
+        expected.put(student2.getId(),student2);
+        expected.put(Asterix.getId(),Asterix);
+        
+        studentDBHashMap.addToDb(Asterix);
+        
+        try {
+            studentDBHashMap.addToDb(Asterix);
+        } catch (RuntimeException e) {
+            thrown = true;
+        }
+        Map<String, Student> actual = studentDBHashMap.list();
+        assertEquals(expected, actual);
+        assertTrue(thrown);
+    }
+
+    @Test
     void shouldRemoveStudentByName(){
         //given
         students.put(student0.getId(),student0);

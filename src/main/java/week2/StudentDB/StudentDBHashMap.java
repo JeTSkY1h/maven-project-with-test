@@ -29,6 +29,9 @@ public class StudentDBHashMap {
     }
 
     public void addToDb(Student newStudent){
+        if(students.containsKey(newStudent.getId())){
+            throw new RuntimeException("Student existiert Bereits.");
+        }
         students.put(newStudent.getId(),newStudent);
     }
 

@@ -30,6 +30,7 @@ public  class StudentDB {
     }
 
     public void add(Student newStudent){
+        
         Student[] newArr = Arrays.copyOf(studArr, studArr.length + 1);
         newArr[newArr.length-1] = newStudent;
         this.studArr = newArr;

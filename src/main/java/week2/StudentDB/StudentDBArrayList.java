@@ -31,7 +31,21 @@ public  class StudentDBArrayList {
     }
 
     public void addToDb(Student newStudent){
-        students.add(newStudent);
+        if(getIndexByUUid(newStudent.getId()) >= 0) {
+            throw new RuntimeException("Den Student gibt es bereits.");
+        } else {
+            students.add(newStudent);
+        }
+    }
+
+    private int getIndexByUUid(String id){
+        for (int i = 0; i < students.size(); i++) {
+            Student student = students.get(i);
+            if (student.getId().equals(id)){
+                return i;
+            }
+        }
+        return -1;
     }
 
     public int getIndexByName(String name){
