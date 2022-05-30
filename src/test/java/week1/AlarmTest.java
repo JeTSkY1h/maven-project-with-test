@@ -8,7 +8,7 @@ class AlarmTest {
     void alarmShouldTriggerCuaseMoreThen30Ppl () {
         //given
         int ppl = 31;
-        String AlarmStufe = "gelb";
+        AlarmLevelEnum AlarmStufe = AlarmLevelEnum.GELB;
         //when
         var res = Alarm.checkPpl(ppl,AlarmStufe);
         //then
@@ -19,7 +19,7 @@ class AlarmTest {
     void alarmShouldNotTriggerCauseMoreThen30Ppl() {
         //given
         int ppl = 29;
-        String AlarmStufe = "gelb";
+        AlarmLevelEnum AlarmStufe = AlarmLevelEnum.GELB;
         //when
         var res = Alarm.checkPpl(ppl,AlarmStufe);
         //then
@@ -29,7 +29,7 @@ class AlarmTest {
     @Test
     void shouldReturn0BecauseAlarmStufeIsRot(){
         //give
-        String AlarmStufe = "rot";
+        AlarmLevelEnum AlarmStufe = AlarmLevelEnum.ROT;
         //when
         var res = Alarm.setAlarmStufe(AlarmStufe);
         //then
@@ -39,7 +39,7 @@ class AlarmTest {
     @Test
     void shouldReturn30BecauseAlarmStufeIsGelb(){
         //give
-        String AlarmStufe = "gelb";
+        AlarmLevelEnum AlarmStufe = AlarmLevelEnum.GELB;
         //when
         var res = Alarm.setAlarmStufe(AlarmStufe);
         //then
@@ -49,7 +49,7 @@ class AlarmTest {
     @Test
     void shouldReturn60BecauseAlarmStufeIsGruen(){
         //give
-        String AlarmStufe = "grün";
+        AlarmLevelEnum AlarmStufe = AlarmLevelEnum.GRÜN;
         //when
         var res = Alarm.setAlarmStufe(AlarmStufe);
         //then
